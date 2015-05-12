@@ -1,0 +1,39 @@
+<h1>Listing vstarters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Team</th>
+      <th>Name</th>
+      <th>Inn</th>
+      <th>Pos</th>
+      <th>Short</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vstarters.each do |vstarter| %>
+      <tr>
+        <td><%= vstarter.eventschedule_ID %></td>
+        <td><%= vstarter.team %></td>
+        <td><%= vstarter.firstlast %></td>
+        <td><%= vstarter.inning_entered %></td>
+        <td><%= vstarter.player_position %></td>
+        <td><%= vstarter.visitor_shortname %></td>
+        <td><%= vstarter.notes %></td>
+        <td><%= link_to 'Show', vstarter %></td>
+        <td><%= link_to 'Edit', edit_vstarter_path(vstarter) %></td>
+        <td><%= link_to 'Destroy', vstarter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vstarter', new_vstarter_path %>

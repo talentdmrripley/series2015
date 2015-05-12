@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eventschedule_ID: MyString
+  team: MyString
+  firstlast: MyString
+  inning_entered: MyString
+  player_position: MyString
+  visitor_shortname: MyString
+  notes: MyString
+
+two:
+  eventschedule_ID: MyString
+  team: MyString
+  firstlast: MyString
+  inning_entered: MyString
+  player_position: MyString
+  visitor_shortname: MyString
+  notes: MyString

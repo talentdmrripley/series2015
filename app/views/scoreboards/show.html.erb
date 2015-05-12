@@ -1,0 +1,121 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+	<tr>
+		<th width="150">Event: <%= @scoreboard.eventschedule_ID %></td>
+		<th>1</th>
+		<th>2</th>
+		<th>3</th>
+		<th>4</th>
+		<th>5</th>
+		<th>6</th>
+		<th>7</th>
+		<th>8</th>
+		<th>9</th>
+		<th>10</th>
+		<th>11</th>
+		<th>12</th>
+		<th>13</th>
+		<th>R</th>
+		<th>H</th>
+		<th>E</th>
+	</tr>
+ 	<tr>
+		<td><%= @scoreboard.visitor %></div></td>
+		<td><%= @scoreboard.v1 %></td>
+		<td><%= @scoreboard.v2 %></td>
+		<td><%= @scoreboard.v3 %></td>
+		<td><%= @scoreboard.v4 %></td>
+		<td><%= @scoreboard.v5 %></td>
+		<td><%= @scoreboard.v6 %></td>
+		<td><%= @scoreboard.v7 %></td>
+		<td><%= @scoreboard.v8 %></td>
+		<td><%= @scoreboard.v9 %></td>
+		<td><%= @scoreboard.v10 %></td>
+		<td><%= @scoreboard.v11 %></td>
+		<td><%= @scoreboard.v12 %></td>
+		<td><%= @scoreboard.v13 %></td>
+		<td><%= @scoreboard.vruns %></td>
+		<td><%= @scoreboard.vhits %></td>
+		<td><%= @scoreboard.verrs %></td>
+	</tr>
+ 	<tr>
+		<td><%= @scoreboard.home %></div></td>
+		<td><%= @scoreboard.h1 %></td>
+		<td><%= @scoreboard.h2 %></td>
+		<td><%= @scoreboard.h3 %></td>
+		<td><%= @scoreboard.h4 %></td>
+		<td><%= @scoreboard.h5 %></td>
+		<td><%= @scoreboard.h6 %></td>
+		<td><%= @scoreboard.h7 %></td>
+		<td><%= @scoreboard.h8 %></td>
+		<td><%= @scoreboard.h9 %></td>
+		<td><%= @scoreboard.h10 %></td>
+		<td><%= @scoreboard.h11 %></td>
+		<td><%= @scoreboard.h12 %></td>
+		<td><%= @scoreboard.h13 %></td>
+		<td><%= @scoreboard.hruns %></td>
+		<td><%= @scoreboard.hhits %></td>
+		<td><%= @scoreboard.herrs %></td>
+	</tr>
+	<tr>
+		<td colspan="17"><%= :gamenotes %></td>
+	</tr>
+</table>
+<%= link_to 'Edit', edit_scoreboard_path(@scoreboard) %> |
+<%= link_to 'Back', scoreboards_path %>
+
+<script type="text/javascript">
+Parse.initialize("EV7LkRj0EtmE6K7qSfs5m4QwXcTf8v6DvnXTuF0g", "2NW7N4GWtoDroc23vw89dqOsj1A0OwWCLrhyBO0C");
+
+var NaiaScoreBoard = Parse.Object.extend("NaiaScoreBoard");
+var naiaScoreBoard = new NaiaScoreBoard();
+ 
+naiaScoreBoard.set("EventSchedule_ID", "<%= @scoreboard.eventschedule_ID %>");
+naiaScoreBoard.set("a_a_visitor", "<%= @scoreboard.visitor %>");
+naiaScoreBoard.set("b_a_home", "<%= @scoreboard.home %>");
+naiaScoreBoard.set("a_v01", "<%= @scoreboard.v1 %>");
+naiaScoreBoard.set("a_v02", "<%= @scoreboard.v2 %>");
+naiaScoreBoard.set("a_v03", "<%= @scoreboard.v3 %>");
+naiaScoreBoard.set("a_v04", "<%= @scoreboard.v4 %>");
+naiaScoreBoard.set("a_v05", "<%= @scoreboard.v5 %>");
+naiaScoreBoard.set("a_v06", "<%= @scoreboard.v6 %>");
+naiaScoreBoard.set("a_v07", "<%= @scoreboard.v7 %>");
+naiaScoreBoard.set("a_v08", "<%= @scoreboard.v8 %>");
+naiaScoreBoard.set("a_v09", "<%= @scoreboard.v9 %>");
+naiaScoreBoard.set("a_v10", "<%= @scoreboard.v10 %>");
+naiaScoreBoard.set("a_v11", "<%= @scoreboard.v11 %>");
+naiaScoreBoard.set("a_v12", "<%= @scoreboard.v12 %>");
+naiaScoreBoard.set("a_v13", "<%= @scoreboard.v13 %>");
+naiaScoreBoard.set("a_x_runs", "<%= @scoreboard.v13 %>");
+naiaScoreBoard.set("a_y_hits", "<%= @scoreboard.v13 %>");
+naiaScoreBoard.set("a_z_errs", "<%= @scoreboard.v13 %>");
+naiaScoreBoard.set("b_h01", "<%= @scoreboard.h1 %>");
+naiaScoreBoard.set("b_h02", "<%= @scoreboard.h2 %>");
+naiaScoreBoard.set("b_h03", "<%= @scoreboard.h3 %>");
+naiaScoreBoard.set("b_h04", "<%= @scoreboard.h4 %>");
+naiaScoreBoard.set("b_h05", "<%= @scoreboard.h5 %>");
+naiaScoreBoard.set("b_h06", "<%= @scoreboard.h6 %>");
+naiaScoreBoard.set("b_h07", "<%= @scoreboard.h7 %>");
+naiaScoreBoard.set("b_h08", "<%= @scoreboard.h8 %>");
+naiaScoreBoard.set("b_h09", "<%= @scoreboard.h9 %>");
+naiaScoreBoard.set("b_h10", "<%= @scoreboard.h10 %>");
+naiaScoreBoard.set("b_h11", "<%= @scoreboard.h11 %>");
+naiaScoreBoard.set("b_h12", "<%= @scoreboard.h12 %>");
+naiaScoreBoard.set("b_h13", "<%= @scoreboard.h13 %>");
+naiaScoreBoard.set("b_x_hruns", "<%= @scoreboard.hruns %>");
+naiaScoreBoard.set("b_y_hhits", "<%= @scoreboard.hhits %>");
+naiaScoreBoard.set("b_z_herrs", "<%= @scoreboard.herrs %>");
+
+ naiaScoreBoard.save(null, {
+  success: function(naiaScoreBoard) {
+    // Execute any logic that should take place after the object is saved.
+    alert('New object created with objectId: ' + naiaScoreBoard.id);
+  },
+  error: function(naiaScoreBoard, error) {
+    // Execute any logic that should take place if the save fails.
+    // error is a Parse.Error with an error code and message.
+    alert('Failed to create new object, with error code: ' + error.message);
+  }
+});
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+  </head>
+
+  <body>
+  
+  <div class="row">
+  	<div class="columns-5"><%= yield %></div>
+  	<div class="columns-7"></div>
+  </div>
+
+    
+
+  </body>
+</html>

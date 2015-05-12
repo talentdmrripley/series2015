@@ -1,0 +1,69 @@
+<h1>Listing scoreboards</h1>
+<tbody><% @scoreboards.each do |scoreboard| %>
+<table>
+	<tr align="center">
+	  
+		<th width="150"><%= link_to 'Edit', edit_scoreboard_path(scoreboard), class: "button tiny" %></td>
+		<th>1</th>
+		<th>2</th>
+		<th>3</th>
+		<th>4</th>
+		<th>5</th>
+		<th>6</th>
+		<th>7</th>
+		<th>8</th>
+		<th>9</th>
+		<th>10</th>
+		<th>11</th>
+		<th>12</th>
+		<th>13</th>
+		<th>R</th>
+		<th>H</th>
+		<th>E</th>
+	</tr>
+ 	<tr>
+ 		
+		<td><%= scoreboard.visitor %></div></td>
+		<td><%= scoreboard.v1 %></td>
+		<td><%= scoreboard.v2 %></td>
+		<td><%= scoreboard.v3 %></td>
+		<td><%= scoreboard.v4 %></td>
+		<td><%= scoreboard.v5 %></td>
+		<td><%= scoreboard.v6 %></td>
+		<td><%= scoreboard.v7 %></td>
+		<td><%= scoreboard.v8 %></td>
+		<td><%= scoreboard.v9 %></td>
+		<td><%= scoreboard.v10 %></td>
+		<td><%= scoreboard.v11 %></td>
+		<td><%= scoreboard.v12 %></td>
+		<td><%= scoreboard.v13 %></td>
+		<td><%= scoreboard.vruns %></td>
+		<td><%= scoreboard.vhits %></td>
+		<td><%= scoreboard.verrs %></td>
+	</tr>
+ 	<tr>
+		<td><%= scoreboard.home %></div></td>
+		<td><%= scoreboard.h1 %></td>
+		<td><%= scoreboard.h2 %></td>
+		<td><%= scoreboard.h3 %></td>
+		<td><%= scoreboard.h4 %></td>
+		<td><%= scoreboard.h5 %></td>
+		<td><%= scoreboard.h6 %></td>
+		<td><%= scoreboard.h7 %></td>
+		<td><%= scoreboard.h8 %></td>
+		<td><%= scoreboard.h9 %></td>
+		<td><%= scoreboard.h10 %></td>
+		<td><%= scoreboard.h11 %></td>
+		<td><%= scoreboard.h12 %></td>
+		<td><%= scoreboard.h13 %></td>
+		<td><%= scoreboard.hruns %></td>
+		<td><%= scoreboard.hhits %></td>
+		<td><%= scoreboard.herrs %></td>
+	</tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scoreboard', new_scoreboard_path, class: "button" %>

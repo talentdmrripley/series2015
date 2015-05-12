@@ -1,0 +1,45 @@
+<%= form_for(@hstarter) do |f| %>
+  <% if @hstarter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hstarter.errors.count, "error") %> prohibited this hstarter from being saved:</h2>
+
+      <ul>
+      <% @hstarter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :scheduleID %><br>
+    <%= f.text_field :eventschedule_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.text_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :firstlast %>
+  </div>
+  <div class="field">
+    <%= f.label :Inn %><br>
+    <%= f.text_field :inning_entered %>
+  </div>
+  <div class="field">
+    <%= f.label :Pos %><br>
+    <%= f.text_field :player_position %>
+  </div>
+  <div class="field">
+    <%= f.label :mascot %><br>
+    <%= f.text_field :visitor_shortname %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

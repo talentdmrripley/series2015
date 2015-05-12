@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Eventschedule id:</strong>
+  <%= @hstarter.eventschedule_ID %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @hstarter.team %>
+</p>
+
+<p>
+  <strong>Firstlast:</strong>
+  <%= @hstarter.firstlast %>
+</p>
+
+<p>
+  <strong>Inning entered:</strong>
+  <%= @hstarter.inning_entered %>
+</p>
+
+<p>
+  <strong>Player position:</strong>
+  <%= @hstarter.player_position %>
+</p>
+
+<p>
+  <strong>Visitor shortname:</strong>
+  <%= @hstarter.visitor_shortname %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @hstarter.notes %>
+</p>
+
+<%= link_to 'Edit', edit_hstarter_path(@hstarter) %> |
+<%= link_to 'Back', hstarters_path %>
+
+<script type="text/javascript">
+
+Parse.initialize("EV7LkRj0EtmE6K7qSfs5m4QwXcTf8v6DvnXTuF0g", "2NW7N4GWtoDroc23vw89dqOsj1A0OwWCLrhyBO0C");
+
+var HStarter = Parse.Object.extend("HStarter");
+var hStarter = new HStarter();
+ 
+hStarter.set("EventSchedule_ID", "<%= @hstarter.eventschedule_ID %>");
+hStarter.set("team_name", "<%= @hstarter.team %>");
+hStarter.set("firstlast", "<%= @hstarter.firstlast %>");
+hStarter.set("v_inning_enter", "<%= @hstarter.inning_entered %>");
+hStarter.set("v_position", "<%= @hstarter.player_position %>");
+hStarter.set("v_short_name", "<%= @hstarter.visitor_shortname %>");
+hStarter.set("notes", "<%= @hstarter.notes %>");
+ 
+hStarter.save(null, {
+  success: function(hStarter) {
+    // Execute any logic that should take place after the object is saved.
+    alert('New object created with objectId: ' + hStarter.id);
+  },
+  error: function(hStarter, error) {
+    // Execute any logic that should take place if the save fails.
+    // error is a Parse.Error with an error code and message.
+    alert('Failed to create new object, with error code: ' + error.message);
+  }
+});
+</script>

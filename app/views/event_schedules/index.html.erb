@@ -1,0 +1,35 @@
+<h1>Listing event_schedules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Objectid</th>
+      <th>Event date</th>
+      <th>Event site</th>
+      <th>Event visitor</th>
+      <th>Event home</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_schedules.each do |event_schedule| %>
+      <tr>
+        <td><%= event_schedule.objectID %></td>
+        <td><%= event_schedule.event_date %></td>
+        <td><%= event_schedule.event_site %></td>
+        <td><%= event_schedule.event_visitor %></td>
+        <td><%= event_schedule.event_home %></td>
+        <td><%= link_to 'Show', event_schedule %></td>
+        <td><%= link_to 'Edit', edit_event_schedule_path(event_schedule) %></td>
+        <td><%= link_to 'Destroy', event_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event schedule', new_event_schedule_path %>

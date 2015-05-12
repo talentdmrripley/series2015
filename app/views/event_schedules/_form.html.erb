@@ -1,0 +1,37 @@
+<%= form_for(@event_schedule) do |f| %>
+  <% if @event_schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_schedule.errors.count, "error") %> prohibited this event_schedule from being saved:</h2>
+
+      <ul>
+      <% @event_schedule.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :objectID %><br>
+    <%= f.text_field :objectID %>
+  </div>
+  <div class="field">
+    <%= f.label :event_date %><br>
+    <%= f.datetime_select :event_date %>
+  </div>
+  <div class="field">
+    <%= f.label :event_site %><br>
+    <%= f.text_field :event_site %>
+  </div>
+  <div class="field">
+    <%= f.label :event_visitor %><br>
+    <%= f.text_field :event_visitor %>
+  </div>
+  <div class="field">
+    <%= f.label :event_home %><br>
+    <%= f.text_field :event_home %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Objectid:</strong>
+  <%= @event_schedule.objectID %>
+</p>
+
+<p>
+  <strong>Event date:</strong>
+  <%= @event_schedule.event_date %>
+</p>
+
+<p>
+  <strong>Event site:</strong>
+  <%= @event_schedule.event_site %>
+</p>
+
+<p>
+  <strong>Event visitor:</strong>
+  <%= @event_schedule.event_visitor %>
+</p>
+
+<p>
+  <strong>Event home:</strong>
+  <%= @event_schedule.event_home %>
+</p>
+
+<%= link_to 'Edit', edit_event_schedule_path(@event_schedule) %> |
+<%= link_to 'Back', event_schedules_path %>

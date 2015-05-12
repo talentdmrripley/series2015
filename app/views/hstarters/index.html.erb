@@ -1,0 +1,39 @@
+<h1>Listing hstarters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Team</th>
+      <th>Name</th>
+      <th>Inn</th>
+      <th>Pos</th>
+      <th>Short</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hstarters.each do |hstarter| %>
+      <tr>
+        <td><%= hstarter.eventschedule_ID %></td>
+        <td><%= hstarter.team %></td>
+        <td><%= hstarter.firstlast %></td>
+        <td><%= hstarter.inning_entered %></td>
+        <td><%= hstarter.player_position %></td>
+        <td><%= hstarter.visitor_shortname %></td>
+        <td><%= hstarter.notes %></td>
+        <td><%= link_to 'Show', hstarter %></td>
+        <td><%= link_to 'Edit', edit_hstarter_path(hstarter) %></td>
+        <td><%= link_to 'Destroy', hstarter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hstarter', new_hstarter_path %>

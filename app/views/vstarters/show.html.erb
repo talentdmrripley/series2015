@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Eventschedule id:</strong>
+  <%= @vstarter.eventschedule_ID %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @vstarter.team %>
+</p>
+
+<p>
+  <strong>Firstlast:</strong>
+  <%= @vstarter.firstlast %>
+</p>
+
+<p>
+  <strong>Inning entered:</strong>
+  <%= @vstarter.inning_entered %>
+</p>
+
+<p>
+  <strong>Player position:</strong>
+  <%= @vstarter.player_position %>
+</p>
+
+<p>
+  <strong>Visitor shortname:</strong>
+  <%= @vstarter.visitor_shortname %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @vstarter.notes %>
+</p>
+
+<%= link_to 'Edit', edit_vstarter_path(@vstarter) %> |
+<%= link_to 'Back', vstarters_path %>
+

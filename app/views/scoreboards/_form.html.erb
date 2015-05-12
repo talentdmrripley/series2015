@@ -1,0 +1,80 @@
+<%= form_for(@scoreboard) do |f| %>
+  <% if @scoreboard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scoreboard.errors.count, "error") %> prohibited this scoreboard from being saved:</h2>
+
+      <ul>
+      <% @scoreboard.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+
+  <table>
+	<tr>
+		<th width="150"><%= f.text_field :eventschedule_ID %></td>
+		<th>1</th>
+		<th>2</th>
+		<th>3</th>
+		<th>4</th>
+		<th>5</th>
+		<th>6</th>
+		<th>7</th>
+		<th>8</th>
+		<th>9</th>
+		<th>10</th>
+		<th>11</th>
+		<th>12</th>
+		<th>13</th>
+		<th>R</th>
+		<th>H</th>
+		<th>E</th>
+	</tr>
+ 	<tr>
+		<td><%= f.text_field :visitor %></div></td>
+		<td><%= f.text_field :v1, :size => 2 %></td>
+		<td><%= f.text_field :v2, :size => 2 %></td>
+		<td><%= f.text_field :v3, :size => 2 %></td>
+		<td><%= f.text_field :v4, :size => 2 %></td>
+		<td><%= f.text_field :v5, :size => 2 %></td>
+		<td><%= f.text_field :v6, :size => 2 %></td>
+		<td><%= f.text_field :v7, :size => 2 %></td>
+		<td><%= f.text_field :v8, :size => 2 %></td>
+		<td><%= f.text_field :v9, :size => 2 %></td>
+		<td><%= f.text_field :v10, :size => 2 %></td>
+		<td><%= f.text_field :v11, :size => 2 %></td>
+		<td><%= f.text_field :v12, :size => 2 %></td>
+		<td><%= f.text_field :v13, :size => 2 %></td>
+		<td><%= f.text_field :vruns, :size => 2 %></td>
+		<td><%= f.text_field :vhits, :size => 2 %></td>
+		<td><%= f.text_field :verrs, :size => 2 %></td>
+	</tr>
+ 	<tr>
+		<td><%= f.text_field :home %></div></td>
+		<td><%= f.text_field :h1, :size => 2 %></td>
+		<td><%= f.text_field :h2, :size => 2 %></td>
+		<td><%= f.text_field :h3, :size => 2 %></td>
+		<td><%= f.text_field :h4, :size => 2 %></td>
+		<td><%= f.text_field :h5, :size => 2 %></td>
+		<td><%= f.text_field :h6, :size => 2 %></td>
+		<td><%= f.text_field :h7, :size => 2 %></td>
+		<td><%= f.text_field :h8, :size => 2 %></td>
+		<td><%= f.text_field :h9, :size => 2 %></td>
+		<td><%= f.text_field :h10, :size => 2 %></td>
+		<td><%= f.text_field :h11, :size => 2 %></td>
+		<td><%= f.text_field :h12, :size => 2 %></td>
+		<td><%= f.text_field :h13, :size => 2 %></td>
+		<td><%= f.text_field :hruns, :size => 2 %></td>
+		<td><%= f.text_field :hhits, :size => 2 %></td>
+		<td><%= f.text_field :herrs, :size => 2 %></td>
+	</tr>
+	<tr>
+		<td colspan="13"><%= f.text_area :gamenotes, :lines => 18 %></td>
+	</tr>
+</table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
